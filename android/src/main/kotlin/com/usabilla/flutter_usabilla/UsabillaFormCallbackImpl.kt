@@ -28,7 +28,7 @@ class UsabillaFormCallbackImpl : UsabillaFormCallback {
     override fun formLoadFail() {
         val res: Map<String, Any> =
             mapOf<String, Any>(KEY_ERROR_MSG to "The form could not be loaded")
-        ubFormResult.success(res)
+        ubFormResult?.success(res)
         ubFormResult = null
     }
 }
